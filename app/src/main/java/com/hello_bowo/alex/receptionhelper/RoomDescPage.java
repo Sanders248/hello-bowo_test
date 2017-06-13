@@ -47,7 +47,7 @@ public class RoomDescPage extends AppCompatActivity {
     private void populateViews() {
         _textDesc.setText(_room.get_description());
         _textTitle.setText(_room.get_title());
-        _textPrice.setText(_room.get_price() + "");
+        _textPrice.setText(_room.get_price() + " euros / night");
         _imPicture.setBackgroundResource(_room.get_picture());
 
         Glide

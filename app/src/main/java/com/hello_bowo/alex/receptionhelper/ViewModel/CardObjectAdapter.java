@@ -27,7 +27,6 @@ public class CardObjectAdapter extends RecyclerView.Adapter<CardObjectAdapter.My
 
     private Context _context;
     private List<ICardObject> _cardObjects;
-    private int _actualPositionObject;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, price;
@@ -44,7 +43,6 @@ public class CardObjectAdapter extends RecyclerView.Adapter<CardObjectAdapter.My
     public CardObjectAdapter(Context _context, List<ICardObject> _cardObject) {
         this._context = _context;
         this._cardObjects = _cardObject;
-        _actualPositionObject = 0;
     }
 
     @Override

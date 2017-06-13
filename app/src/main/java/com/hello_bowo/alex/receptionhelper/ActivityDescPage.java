@@ -17,6 +17,8 @@ public class ActivityDescPage extends AppCompatActivity {
     TextView _textTitle;
     TextView _textPrice;
     TextView _textDesc;
+    TextView _textTelNumber;
+    TextView _textLocation;
     ImageView _imPicture;
 
     Activity _activity;
@@ -28,7 +30,7 @@ public class ActivityDescPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.room_description);
+        setContentView(R.layout.activity_description);
 
         _activity = (Activity) getIntent().getSerializableExtra("CardObject");
 
@@ -40,14 +42,18 @@ public class ActivityDescPage extends AppCompatActivity {
         _textDesc = (TextView) findViewById(R.id.textDescription);
         _textPrice = (TextView) findViewById(R.id.textPrice);
         _textTitle = (TextView) findViewById(R.id.textTitle);
-        _imPicture = (ImageView) findViewById(R.id.roomPicture);
+        _imPicture = (ImageView) findViewById(R.id.activityPicture);
+        _textTelNumber = (TextView) findViewById(R.id.textTelNumber);
+        _textLocation = (TextView) findViewById(R.id.textLocation);
     }
 
     private void populateViews() {
         _textDesc.setText(_activity.get_description());
         _textTitle.setText(_activity.get_title());
-        _textPrice.setText(_activity.get_price() + "");
+        _textPrice.setText(_activity.get_price() + " euros / person");
         _imPicture.setBackgroundResource(_activity.get_picture());
+        _textLocation.setText("Location : " + _activity.get_location());
+        _textTelNumber.setText("tel : " +_activity.get_telnumber());
 
         Glide
                 .with(this)
