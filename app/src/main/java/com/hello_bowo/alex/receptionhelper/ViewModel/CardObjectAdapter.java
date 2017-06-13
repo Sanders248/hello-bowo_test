@@ -1,9 +1,7 @@
 package com.hello_bowo.alex.receptionhelper.ViewModel;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,24 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
+import com.hello_bowo.alex.receptionhelper.Model.ICardObject;
 import com.hello_bowo.alex.receptionhelper.Model.Room;
 import com.hello_bowo.alex.receptionhelper.R;
 
 import java.util.List;
 
-import javax.sql.DataSource;
-
 /**
  * Created by Alex on 13/06/2017.
  */
 
-public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MyViewHolder>{
+public class CardObjectAdapter extends RecyclerView.Adapter<CardObjectAdapter.MyViewHolder>{
 
     private Context _context;
-    private List<Room> _rooms;
+    private List<ICardObject> _cardObjects;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, price;
@@ -42,9 +36,9 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MyViewHolder>{
         }
     }
 
-    public RoomAdapter(Context _context, List<Room> _rooms) {
+    public CardObjectAdapter(Context _context, List<ICardObject> _cardObject) {
         this._context = _context;
-        this._rooms = _rooms;
+        this._cardObjects = _cardObject;
     }
 
     @Override
@@ -57,38 +51,22 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        Room room = _rooms.get(position);
-        holder.title.setText(room.get_title());
-        holder.price.setText(room.get_price() + " euros");
-     //   holder.picture.setImageResource(R.drawable.room_icone);
+        ICardObject cardObject = _cardObjects.get(position);
+        holder.title.setText(cardObject.get_title());
+        holder.price.setText(cardObject.get_price() + " euros");
 
         Glide
                 .with(_context)
-                .load(room.get_picture())
+                .load(cardObject.get_picture())
                // .listener(requestListener)
-                .error(R.drawable.room_icone)
+                .error(R.drawable.ic_not_found)
                 .into(holder.picture);
 
-/*
-        try {
-            // loading album cover using Glide library
-            Glide.with(_context).load(room.get_picture()).into(holder.picture);
-        }
-        catch (Exception e)
-        {
-            String error = e.toString();
-        }
-  */    /*  holder.overflow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showPopupMenu(holder.overflow);
-            }
-        });*/
     }
 
     @Override
     public int getItemCount() {
-        return _rooms.size();
+        return _cardObjects.size();
     }
 
 

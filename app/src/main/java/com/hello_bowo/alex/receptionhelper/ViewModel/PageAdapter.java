@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.hello_bowo.alex.receptionhelper.FindActivityPage;
 import com.hello_bowo.alex.receptionhelper.FindRoomPage;
 
 /**
@@ -25,9 +26,7 @@ public class PageAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new FindRoomPage();
             case 1:
-                return new Fragment();
-            case 2:
-                return new Fragment();
+                return new FindActivityPage();
             default:
                 return null;
         }
