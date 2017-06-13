@@ -31,7 +31,7 @@ public class FindRoomPage extends Fragment {
 
         //Returning the layout file after inflating
         //Change R.layout.tab1 in you classes
-        return inflater.inflate(R.layout.find_room, container, false);
+        return inflater.inflate(R.layout.recycler_view, container, false);
     }
 
     @Override
@@ -43,7 +43,6 @@ public class FindRoomPage extends Fragment {
         _recyclerView = (RecyclerView) actual_view.findViewById(R.id.recycler_view);
 
         _rooms = new ArrayList<>();
-
 
         _adapter = new CardObjectAdapter(getContext(), _rooms);
 

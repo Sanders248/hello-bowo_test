@@ -20,17 +20,16 @@ public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabS
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        initTabView();
+        bindViews();
     }
 
-    private void initTabView()
+    private void bindViews()
     {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
         //Adding the tabs using addTab() method
-        tabLayout.addTab(tabLayout.newTab().setText("Tab1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab2"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab2"));
+        tabLayout.addTab(tabLayout.newTab().setText("Find a Room"));
+        tabLayout.addTab(tabLayout.newTab().setText("Find an Activity"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Initializing viewPager

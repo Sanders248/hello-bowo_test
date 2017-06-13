@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.hello_bowo.alex.receptionhelper.Model.Activity;
 import com.hello_bowo.alex.receptionhelper.Model.ICardObject;
-import com.hello_bowo.alex.receptionhelper.Model.Room;
 import com.hello_bowo.alex.receptionhelper.ViewModel.CardObjectAdapter;
 
 import java.util.ArrayList;
@@ -29,11 +28,7 @@ public class FindActivityPage extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        //Returning the layout file after inflating
-        //Change R.layout.tab1 in you classes
-        //todo change name find_room
-        return inflater.inflate(R.layout.find_room, container, false);
+        return inflater.inflate(R.layout.recycler_view, container, false);
     }
 
     @Override
@@ -73,7 +68,7 @@ public class FindActivityPage extends Fragment {
         Activity d = new Activity("Tennis", "Let's play at any time with friends or take a teacher", 20, R.drawable.ic_sport, "Jura", "0601020304");
         _activitys.add(d);
 
-        Activity e = new Activity("Diving", "Equipment available for all levels", 20, R.drawable.ic_sport, "Jura", "0601020304");
+        Activity e = new Activity("Diving", "Carpentorum resultantes fabricantur celebratae ingentes in vocali sit nunc et clausis organa non ita doctor fabricantur ludicrarum ludicrarum studiorum tinnitu organa organa non nunc speciem histrionici antea ludicrarum cum levia vocali fidium seriis accitur ludicrarum philosopho instrumenta ingentes resultantes accitur pro in vocali oratoris non fabricantur denique carpentorum carpentorum non.", 20, R.drawable.ic_sport, "Jura", "0601020304");
         _activitys.add(e);
 
         Activity f = new Activity("Archery", "New way for relaxing and focusing", 20, R.drawable.ic_sport, "Jura", "0601020304");

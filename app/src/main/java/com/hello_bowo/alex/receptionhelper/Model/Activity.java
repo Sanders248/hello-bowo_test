@@ -1,10 +1,12 @@
 package com.hello_bowo.alex.receptionhelper.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by Alex on 13/06/2017.
  */
 
-public class Activity implements ICardObject {
+public class Activity implements ICardObject, Serializable {
     private String _title;
     private String _description;
     private int _price;

@@ -1,15 +1,16 @@
 package com.hello_bowo.alex.receptionhelper.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by Alex on 13/06/2017.
  */
 
-public class Room implements ICardObject {
+public class Room implements ICardObject, Serializable {
     private String _title;
     private String _description;
     private int _price;
     private int _picture;
-
 
     public Room(String _title, String _description, int _price, int _picture) {
         this._title = _title;
