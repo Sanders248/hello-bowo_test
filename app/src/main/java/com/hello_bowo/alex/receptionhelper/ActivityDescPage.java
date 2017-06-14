@@ -2,6 +2,7 @@ package com.hello_bowo.alex.receptionhelper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,11 +35,15 @@ public class ActivityDescPage extends AppCompatActivity {
 
         _activity = (Activity) getIntent().getSerializableExtra("CardObject");
 
+
         bindViews();
         populateViews();
     }
 
     private void bindViews() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         _textDesc = (TextView) findViewById(R.id.textDescription);
         _textPrice = (TextView) findViewById(R.id.textPrice);
         _textTitle = (TextView) findViewById(R.id.textTitle);
@@ -47,7 +52,17 @@ public class ActivityDescPage extends AppCompatActivity {
         _textLocation = (TextView) findViewById(R.id.textLocation);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     private void populateViews() {
+        getSupportActionBar().setSubtitle(_activity.get_title());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         _textDesc.setText(_activity.get_description());
         _textTitle.setText(_activity.get_title());
         _textPrice.setText(_activity.get_price() + " euros / person");

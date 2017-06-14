@@ -38,13 +38,26 @@ public class RoomDescPage extends AppCompatActivity {
     }
 
     private void bindViews() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         _textDesc = (TextView) findViewById(R.id.textDescription);
         _textPrice = (TextView) findViewById(R.id.textPrice);
         _textTitle = (TextView) findViewById(R.id.textTitle);
         _imPicture = (ImageView) findViewById(R.id.roomPicture);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     private void populateViews() {
+        getSupportActionBar().setSubtitle(_room.get_title() + " room");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         _textDesc.setText(_room.get_description());
         _textTitle.setText(_room.get_title());
         _textPrice.setText(_room.get_price() + " euros / night");

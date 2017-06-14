@@ -1,69 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-      <ImageView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_not_found"
-        android:id="@+id/activityPicture" />
+        android:layout_height="fill_parent">
 
-     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/activityPicture"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textTitle"
-        android:layout_alignEnd="@+id/activityPicture"
-         android:layout_marginBottom="20dp"
-         />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textTitle"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/textPrice"
-        android:layout_alignStart="@+id/textTitle"
-         />
+            <ImageView
+                android:id="@+id/activityPicture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_not_found" />
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textPrice"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/textTelNumber"
-            android:layout_alignStart="@+id/textTitle"
-            />
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/activityPicture"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/activityPicture"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="12dp"
+                android:text="TextView" />
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textTelNumber"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/textLocation"
-            android:layout_alignStart="@+id/textTitle"
-            />
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textTitle"
+                android:layout_below="@+id/textTitle"
+                android:layout_marginBottom="20dp"
+                android:text="TextView" />
 
-     <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/textLocation"
-        android:id="@+id/textDescription"
-         android:layout_alignStart="@+id/textTitle"
-         android:layout_marginTop="30dp"
-        />
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/textTelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textTitle"
+                android:layout_below="@+id/textPrice"
+                android:layout_marginBottom="20dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textTitle"
+                android:layout_below="@+id/textTelNumber"
+                android:layout_marginBottom="20dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textTitle"
+                android:layout_below="@+id/textLocation"
+                android:layout_marginTop="30dp"
+                android:text="TextView" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
