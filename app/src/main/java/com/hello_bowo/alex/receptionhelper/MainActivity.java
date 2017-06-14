@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabS
         //Adding the tabs using addTab() method
         tabLayout.addTab(tabLayout.newTab().setText("Find a Room"));
         tabLayout.addTab(tabLayout.newTab().setText("Find an Activity"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tiles"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Initializing viewPager
@@ -63,10 +64,12 @@ public class MainActivity extends AppCompatActivity  implements TabLayout.OnTabS
                 _tabSelectedChanged = false;
 
             if (!_tabSelectedChanged) {
-                if (position == 0 && tabLayout.getSelectedTabPosition() == 1)
+                if (position == 0 && tabLayout.getSelectedTabPosition() != 0)
                     tabLayout.getTabAt(0).select();
-                else if (position == 1 && tabLayout.getSelectedTabPosition() == 0)
+                else if (position == 1 && tabLayout.getSelectedTabPosition() != 1 )
                     tabLayout.getTabAt(1).select();
+                else if (position == 2 && tabLayout.getSelectedTabPosition() != 2)
+                    tabLayout.getTabAt(2).select();
             }
         }
 

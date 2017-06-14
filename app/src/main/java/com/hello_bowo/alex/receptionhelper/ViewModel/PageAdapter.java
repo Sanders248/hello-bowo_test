@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.hello_bowo.alex.receptionhelper.FindActivityPage;
 import com.hello_bowo.alex.receptionhelper.FindRoomPage;
+import com.hello_bowo.alex.receptionhelper.TilesPage;
 
 /**
  * Created by Alex on 13/06/2017.
@@ -29,6 +30,8 @@ public class PageAdapter extends FragmentStatePagerAdapter {
                 return new FindRoomPage();
             case 1:
                 return new FindActivityPage();
+            case 2:
+                return new TilesPage();
             default:
                 return null;
         }

@@ -95,4 +95,7 @@ public class CardObjectAdapter extends RecyclerView.Adapter<CardObjectAdapter.My
     }
 
 
+    public boolean isHeader(int position) {
+        return position == 0;
+    }
 }
