@@ -3,6 +3,8 @@ package com.hello_bowo.alex.receptionhelper.ViewModel;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.View;
 
 import com.hello_bowo.alex.receptionhelper.FindActivityPage;
 import com.hello_bowo.alex.receptionhelper.FindRoomPage;
