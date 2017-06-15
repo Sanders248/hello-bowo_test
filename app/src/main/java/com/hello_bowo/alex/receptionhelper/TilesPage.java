@@ -59,7 +59,7 @@ public class TilesPage  extends Fragment {
 
     private void prepareActivitys(){
 
-        Tile a = new Tile(R.drawable.textmeteo, R.drawable.meteo, "Ensoleillé", "", "http://www.meteo-france.mobi/home#!france", 1);
+        Tile a = new Tile(R.drawable.textmeteo, R.drawable.meteo, "", "", "http://www.meteo-france.mobi/home#!france", 1);
         _tiles.add(a);
 
         Tile b = new Tile(R.drawable.logohotel, R.drawable.hotel, "Plus d'info", "Bienvenue dans votre hotel Pullman", "http://www.pullmanhotels.com/fr/france/index.shtml", 2);
@@ -68,7 +68,7 @@ public class TilesPage  extends Fragment {
         Tile c = new Tile(R.drawable.logospa, R.drawable.reserve, "Réservez votre scéance", "Détendez-vous avec nos scéances de Spa & Fitness", "http://lesjardinsdumarais.com/fr/fitness-center.html", 2);
         _tiles.add(c);
 
-        Tile d = new Tile(R.drawable.logocityguide, R.drawable.cityguide, "Visitez la ville", "", "https://www.parisinfo.com/", 1);
+        Tile d = new Tile(R.drawable.logocityguide, R.drawable.cityguide, "Visitez", "Visitez la ville", "https://www.parisinfo.com/", 1);
         _tiles.add(d);
 
         Tile e = new Tile(R.drawable.logocommande, R.drawable.commande, "Commandez", "Notre restaurant directement dans votre chambre.", "https://restaurant.michelin.fr/restaurants/paris", 1);
@@ -86,7 +86,7 @@ public class TilesPage  extends Fragment {
         Tile i = new Tile(-1, R.drawable.netflix, "Lancer Netflix", "", "https://www.netflix.com/fr/", 1);
         _tiles.add(i);
 
-        Tile j = new Tile(R.drawable.news, R.drawable.logonews, "L'actualité", "", "https://news.google.fr/", 1);
+        Tile j = new Tile(R.drawable.logonews, R.drawable.news, "L'actualité", "News", "https://news.google.fr/", 1);
         _tiles.add(j);
 
         _adapter.notifyDataSetChanged();

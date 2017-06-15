@@ -67,6 +67,7 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(final TileAdapter.MyViewHolder holder, final int position) {
         Tile tile = _tiles.get(position);
+
         holder.title.setText(tile.getTextTitle());
         holder.button.setText(tile.getTextButton());
 
@@ -85,6 +86,9 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
                 .load(tile.get_picLogo())
                 .error(null)
                 .into(holder.logo);
+
+        if (tile.getTextButton() == "")
+            holder.button.setVisibility(View.GONE);
 
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
