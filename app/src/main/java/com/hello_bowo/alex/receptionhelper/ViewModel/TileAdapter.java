@@ -70,9 +70,7 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
         holder.title.setText(tile.getTextTitle());
         holder.button.setText(tile.getTextButton());
 
-        holder.background.setBackgroundResource(tile.get_picBackground());
-
-/*        Glide.with(_context).load(tile.get_picBackground()).asBitmap().into(new SimpleTarget<Bitmap>(holder.background.getWidth(), holder.background.getHeight()) {
+        Glide.with(_context).load(tile.get_picBackground()).asBitmap().into(new SimpleTarget<Bitmap>() {
             @Override
             public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
                 Drawable drawable = new BitmapDrawable(resource);
@@ -81,13 +79,12 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
                 }
             }
         });
-*/
+
         Glide
                 .with(_context)
                 .load(tile.get_picLogo())
                 .error(null)
                 .into(holder.logo);
-
 
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +96,6 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
                 _context.startActivity(intent);
             }
         });
-
     }
 
     @Override

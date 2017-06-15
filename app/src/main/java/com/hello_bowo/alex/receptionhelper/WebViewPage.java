@@ -107,5 +107,5 @@ public class WebViewPage extends AppCompatActivity {
         onBackPressed();
         return true;
     }
-    
+
 }
