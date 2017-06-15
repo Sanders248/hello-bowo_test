@@ -7,9 +7,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -21,6 +23,7 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.hello_bowo.alex.receptionhelper.Model.Tile;
 import com.hello_bowo.alex.receptionhelper.R;
 import com.hello_bowo.alex.receptionhelper.RoomDescPage;
+import com.hello_bowo.alex.receptionhelper.WebViewPage;
 
 import java.util.List;
 
@@ -86,17 +89,17 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.MyViewHolder>{
                 .into(holder.logo);
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Tile t = _tiles.get(position);
-                Intent intent = new Intent(_context, RoomDescPage.class);
+                Intent intent = new Intent(_context, WebViewPage.class);
                 intent.putExtra("Tile", t);
 
                 _context.startActivity(intent);
             }
         });
+
     }
 
     @Override

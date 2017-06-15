@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hello_bowo.alex.receptionhelper.Model.Tile;
-import com.hello_bowo.alex.receptionhelper.ViewModel.CardObjectAdapter;
 import com.hello_bowo.alex.receptionhelper.ViewModel.TileAdapter;
 
 import java.util.ArrayList;
@@ -41,7 +40,6 @@ public class TilesPage  extends Fragment {
         _recyclerView.setBackgroundResource(R.drawable.background);
         _tiles = new ArrayList<>();
 
-
         _adapter = new TileAdapter(getContext(), _tiles);
 
         final GridLayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
@@ -61,37 +59,36 @@ public class TilesPage  extends Fragment {
 
     private void prepareActivitys(){
 
-        Tile a = new Tile(R.drawable.textmeteo, R.drawable.meteo, "Ensoleillé", "", 1);
+        Tile a = new Tile(R.drawable.textmeteo, R.drawable.meteo, "Ensoleillé", "", "http://www.meteo-france.mobi/home#!france", 1);
         _tiles.add(a);
 
-        Tile b = new Tile(R.drawable.logohotel, R.drawable.hotel, "Plus d'info", "Bienvenue dans votre hotel Pullman", 2);
+        Tile b = new Tile(R.drawable.logohotel, R.drawable.hotel, "Plus d'info", "Bienvenue dans votre hotel Pullman", "http://www.pullmanhotels.com/fr/france/index.shtml", 2);
         _tiles.add(b);
 
-        Tile c = new Tile(R.drawable.logospa, R.drawable.reserve, "Réservez votre scéance", "Détendez-vous avec nos scéances de Spa & Fitness", 2);
+        Tile c = new Tile(R.drawable.logospa, R.drawable.reserve, "Réservez votre scéance", "Détendez-vous avec nos scéances de Spa & Fitness", "http://lesjardinsdumarais.com/fr/fitness-center.html", 2);
         _tiles.add(c);
 
-        Tile d = new Tile(R.drawable.logocityguide, R.drawable.cityguide, "Visitez la ville", "", 1);
+        Tile d = new Tile(R.drawable.logocityguide, R.drawable.cityguide, "Visitez la ville", "", "https://www.parisinfo.com/", 1);
         _tiles.add(d);
 
-        Tile e = new Tile(R.drawable.logocommande, R.drawable.commande, "Commandez", "Notre restaurant directement dans votre chambre.", 1);
+        Tile e = new Tile(R.drawable.logocommande, R.drawable.commande, "Commandez", "Notre restaurant directement dans votre chambre.", "https://restaurant.michelin.fr/restaurants/paris", 1);
         _tiles.add(e);
 
-        Tile f = new Tile(R.drawable.logoreserve, R.drawable.reserve, "Réservez votre table", "Petit déjeuné, déjeuner, dîner", 2);
+        Tile f = new Tile(R.drawable.logoreserve, R.drawable.reserve, "Réservez votre table", "Petit déjeuné, déjeuner, dîner", "https://restaurant.michelin.fr/restaurants/paris", 2);
         _tiles.add(f);
 
-        Tile g = new Tile(R.drawable.logoconciergerie, R.drawable.conciergerie, "Votre demande", "Notre conciergerie.", 3);
+        Tile g = new Tile(R.drawable.logoconciergerie, R.drawable.conciergerie, "Votre demande", "Notre conciergerie.", "http://www.paris-conciergerie.fr/", 3);
         _tiles.add(g);
 
-        Tile h = new Tile(R.drawable.logospotify, R.drawable.spotify, "Lancer Spotify", "", 1);
+        Tile h = new Tile(R.drawable.logospotify, R.drawable.spotify, "Lancer Spotify", "", "https://www.spotify.com/fr/", 1);
         _tiles.add(h);
 
-        Tile i = new Tile(-1, R.drawable.netflix, "Lancer Netflix", "", 1);
+        Tile i = new Tile(-1, R.drawable.netflix, "Lancer Netflix", "", "https://www.netflix.com/fr/", 1);
         _tiles.add(i);
 
-        Tile j = new Tile(R.drawable.news, R.drawable.logonews, "L'actualité", "", 1);
+        Tile j = new Tile(R.drawable.news, R.drawable.logonews, "L'actualité", "", "https://news.google.fr/", 1);
         _tiles.add(j);
 
         _adapter.notifyDataSetChanged();
     }
 }
-

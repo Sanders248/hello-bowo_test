@@ -22,12 +22,13 @@ public class Tile implements Serializable {
         this._spann = 1;
     }
 
-    public Tile(int _picLogo, int _picBackground, String textButton, String textTitle, int _spann) {
+    public Tile(int _picLogo, int _picBackground, String textButton, String textTitle, String _classPage, int _spann) {
         this._picLogo = _picLogo;
         this._picBackground = _picBackground;
         this.textButton = textButton;
         this.textTitle = textTitle;
         this._spann = _spann;
+        this._classPage = _classPage;
     }
 
     public int get_spann() {
@@ -68,5 +69,13 @@ public class Tile implements Serializable {
 
     public void setTextTitle(String textTitle) {
         this.textTitle = textTitle;
+    }
+
+    public String get_classPage() {
+        return _classPage;
+    }
+
+    public void set_classPage(String _classPage) {
+        this._classPage = _classPage;
     }
 }
