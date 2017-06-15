@@ -9,9 +9,10 @@
     <dimen name="backdrop_subtitle">18dp</dimen>
     <dimen name="card_margin">5dp</dimen>
     <dimen name="card_room_radius">0dp</dimen>
-    <dimen name="room_height">160dp</dimen>
+    <dimen name="room_height">180dp</dimen>
     <dimen name="room_title_padding">10dp</dimen>
     <dimen name="room_title">15dp</dimen>
     <dimen name="room_price_padding_bottom">5dp</dimen>
+    <dimen name="desc_maxsize">200dp</dimen>
     <dimen name="room_price">12dp</dimen>
 </resources>
